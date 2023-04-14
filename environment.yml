@@ -1,0 +1,8 @@
+name: streamlit
+dependencies:
+  - python
+  - ipykernel
+  - nb_conda_kernels
+  - pip:
+    - -r requirements.txt
+    - -r requirements-dev.txt
