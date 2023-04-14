@@ -18,4 +18,4 @@ my_fruit_list = my_fruit_list.set_index("Fruit")
 st_ms = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index), ["Avocado", "Strawberries"])
 
 # Display the table on the page.
-streamlit.dataframe(my_fruit_list[my_fruit_list.index.isin(my_fruit_list if st_ms == None else st_ms)])
+streamlit.dataframe(my_fruit_list[my_fruit_list.index.isin(my_fruit_list if len(st_ms) == 0 else st_ms)])
